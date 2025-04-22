@@ -131,7 +131,7 @@ function createSliders() {
   // tile x slider
   tX = createSlider(1, 50, 5, 1); // (min scale, max scale, default, increment)
   tX.position(width/2.5, height + 170); // values moves slider ONLY
-  createP('tiles x:').position(width/2.5, height + 130); // values moves slider text ONLY
+  createP('TILES X:').position(width/2.5, height + 130); // values moves slider text ONLY
 
   // tile y slider
   tY = createSlider(1, 50, 5, 1); // (min scale, max scale, default, increment)
