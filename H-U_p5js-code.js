@@ -52,27 +52,24 @@ function setup() {
   // project title only
   projectTitle = createP('"rhythm of urdu and hindi"').position(width/2.3, height + 10);
   projectTitle = createP('by riyash lughmani').position(width/2.23, height + 35);
-  // projectTitle = createP('press "s" to save!').position(width/2.2, height + 340);
 
-  // hindi text only
-  hindiText = createInput('उर्दू और हिन्दी की ताल'); // place hindi text within the '' on canvas
-  hindiText.attribute('placeholder', 'hindi text (e.g. देसी)'); // where to place the hindi text
-  hindiText.position(width/2.5, height + 100); // where the hindi text box will appear
-  hindiText.size(125); // size of the hindi text box
+  // // hindi text only
+  // hindiText = createInput('उर्दू और हिन्दी की ताल'); // place hindi text within the '' on canvas
+  // hindiText.position(width/2.5, height + 100); // where the hindi text box will appear
+  // hindiText.size(125); // size of the hindi text box
   
-  // urdu text only
-  urduText = createInput('اردو اور ہندی کی تال'); // place urdu text within the '' on canvas
-  urduText.attribute('placeholder', 'urdu text (e.g. دیسی)'); // where to place urdu text
-  urduText.position(width/2, height + 100); // here the urdu text box will appear
-  urduText.size(125); // size of the urdu text box
+  // // urdu text only
+  // urduText = createInput('اردو اور ہندی کی تال'); // place urdu text within the '' on canvas
+  // urduText.position(width/2, height + 100); // here the urdu text box will appear
+  // urduText.size(125); // size of the urdu text box
 }
 
 
 function draw() {
   // overview
   background(255); // canvas colour // WHITE 255 // 220 test
-  let hindiMsg = hindiText.value(); // variable for hindi message
-  let urduMsg = urduText.value(); // variable for urdu message
+  // let hindiMsg = hindiText.value(); // variable for hindi message
+  // let urduMsg = urduText.value(); // variable for urdu message
 
   // hindi-urdu text
   pg.background(255); // graphics colour // WHITE 255 // 220 test
@@ -81,8 +78,8 @@ function draw() {
   pg.push(); // begins the pg for draw
   pg.translate(width/2, height/2);
   pg.textAlign(CENTER, CENTER); // text in centre
-  pg.text(hindiMsg, 20, -75); // hindi message display
-  pg.text(urduMsg, 20, 75); // urdu message display
+  pg.text("उर्दू और हिन्दी की ताल", 20, -75); // hindi message display
+  pg.text("اردو اور ہندی کی تال", 20, 75); // urdu message display
   pg.pop(); // ends the pg for draw
 
   // slider
@@ -158,13 +155,6 @@ function createSliders() {
   sp.position(width/2, height + 310); // values moves slider ONLY
   createP('speed:').position(width/2, height + 270); // values moves slider text ONLY
 }
-
-
-// function keyPressed() {
-//   if (key == 's') { // "S" button on keyboard will save 
-//     saveGif('rhythm of urdu and hindi', 1);  // saved as "rhythm of urdu and hindi" for 5 seconds
-//   }
-// }
 
 
 // END // END //  END //  END //  END //
